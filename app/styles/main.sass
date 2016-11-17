@@ -1,0 +1,137 @@
+@import 'vendors/_reset'
+@import 'vendors/_modal'
+@import 'vendors/_waves'
+@import '_sprite'
+@import '_spritePng'
+
+*
+  outline: none
+  box-sizing: border-box
+  &::before, &::after
+    box-sizing: border-box
+
+html, body
+  width: 100%
+  height: auto
+
+body
+  min-height: 100%
+  font-size: 18px
+  font-weight: 400
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  color: #fff
+  max-width: 100%
+  min-width: 320px
+  overflow-y: auto
+  overflow-x: hidden
+  background-color: #fffde7
+  .earth2
+    @extend .i-video-camera
+
+iframe
+    width: 100%
+    height: 100%
+
+#sliderOne
+  max-width: 1600px
+  margin: 0 auto
+  width: 100%
+h1
+  text-align: center
+  font-size: 42px
+  line-height: normal
+  color: #000
+img
+  max-width: 100%
+  display: inline-block
+  vertical-align: middle
+
+.desc
+  text-align: center
+.btn
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  display: inline-block
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+  margin: 20px auto
+  z-index: 0
+.wrappContent
+  margin: 0 auto
+  max-width: 1600px
+  width: 100%
+  padding: 0 0px
+
+
+.le-info
+  +sprite($le-info)
+.le-like
+  +sprite($le-like)
+
+.li-check
+  +sprite($le-check)
+
+.section
+  padding: 200px 20px
+  height: 100vh
+  position: relative
+  text-align: center
+  h1
+    margin: 20px auto
+    font-size: 20vw
+
+#section00
+  background-color: #a6cfe2
+  h1
+    color: #0b0c11
+
+
+#section01
+  h1, p
+    color: #ff5035
+#section02
+  h1, p
+    color: #c7c6c4
+#section03
+  h1, p
+    color: #9357a9
+
+// hellp Class------------------------------------------------------------------
+.flexB
+  display: flex
+  justify-content: space-between
+
+.black
+  background-color: #000
+.brendRed
+  background-color: #ff5035
+.brendPure
+  background-color: #9357a9
+.brendBlack
+  background-color: #1b1d1c
+
+.brendGreen
+  background-color: #008e8f
+.brenGray
+  background-color: #c7c6c4
+
+.brendYellow
+  background-color: #fae397
+.brendYellowText
+  color: #cba0aa
+
+
+@import 'page/page'

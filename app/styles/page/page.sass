@@ -1,0 +1,237 @@
+.wrapper
+  width: 90%
+  margin: 0 5%
+.brendRed
+  background-color: #ff5035
+.brendPure
+  background-color: #9357a9
+.brendBlack
+  background-color: #1b1d1c
+#intro
+  height: 100vh
+  background: radial-gradient(circle, #74A6EE 0%, #485CB2 100%)
+  text-align: center
+  color: #fff
+  // transition: height 10000000s ease;
+  width: 100%
+
+  .content
+    position: absolute
+    // left: 0
+    // right: 0
+    // margin: auto
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.project
+  text-align: center
+  padding: 200px 0
+  border-bottom: 1px #ebebeb solid
+  transform: translateY(50px)
+  transition: 1s ease-out
+  opacity: 0
+  &.fade-in
+    opacity: 1
+    transform: translateY(0)
+
+  img
+    width: 180px
+    height: 180px
+  p
+    max-width: 300px
+    margin: 0 auto
+    color: #000
+
+#project01
+  h2
+    color: #fff
+    font-size: 26px
+    margin: 10px auto
+  p
+    color: #fff
+
+#project02 h2
+  color: #75C695
+
+#project03 h2
+  color: #F5876F
+
+
+#main
+  position: relative
+  background: #fff
+
+.bcg-parallax
+  padding: 150px 0
+  color: #fff
+  background-color: #000
+  text-align: center
+  position: relative
+  overflow: hidden
+
+  .bcg
+    background: url(../img/img_background.jpg) no-repeat
+    background-size: cover
+    position: absolute
+    width: 100%
+    height: 150%
+    top: 0
+    z-index: 1
+    opacity: .7
+  .content-wrapper
+    width: 90%
+    max-width: 1140px
+    margin: 0 auto
+    z-index: 2
+    position: relative
+
+
+
+/* =Footer */
+
+#footer
+  text-align: center
+  font-size: 22px
+  color: rgba(255, 255, 255, 0.5)
+  background-color: #06060d
+  height: 100vh
+  z-index: 2
+  position: relative
+  .wrapp-footer
+    width: 80%
+    max-width: none
+    margin: 0 10%
+    padding: 20px
+
+  h2
+    font-size: 36px
+    color: #fff
+    margin: 30px auto
+
+  p
+    margin: 0px auto 30px
+
+
+
+  #Layer_1
+    fill: #fff
+    stroke-dasharray:  322
+    stroke-dashoffset: 322
+    stroke: #fff
+    animation: animatePath 9s 0.5s infinite
+
+.circleOne
+  max-width: 200px
+  width: 100%
+  margin: 30px auto
+  background-color: #961f52
+
+
+circle
+  stroke-width: .2px
+  width: 5em
+  height: 5em
+.circle
+  stroke-dasharray:  322
+  stroke-dashoffset: 322
+
+  transition: all 1s
+  will-change: translate
+  // transform: scale(.5)
+  // opacity: 0
+#footer.active
+
+  .circle
+    animation: animatePath 9s forwards
+
+
+@keyframes animatePath
+  0
+
+  50%
+    stroke-dashoffset: 0
+    stroke-dasharray:  0
+    stroke: yellow
+  99%
+    fill: yellow
+    // transform: scale(2)
+    // opacity: 1
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px)
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+
+
+@media only screen and (min-width: 768px)
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+
+
+@media only screen and (min-width: 1140px)
+    /* =General */
+
+    /* =Header */
+
+    /* =Footer */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  *text-indent: -9999px
+  &:before
+    content: ""
+    display: block
+    width: 0
+    height: 150%
+
+.hidden
+  display: none !important
+  visibility: hidden
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  &.focusable
+    &:active, &:focus
+      clip: auto
+      height: auto
+      margin: 0
+      overflow: visible
+      position: static
+      width: auto
+
+.invisible
+  visibility: hidden
+
+.clearfix
+  &:before
+    content: " "
+    display: table
+  &:after
+    content: " "
+    display: table
+    clear: both
+  *zoom: 1

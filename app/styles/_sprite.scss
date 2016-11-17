@@ -1,0 +1,46 @@
+%svg-common {
+	background: url("sprite.svg") no-repeat;
+}
+
+.i-video-camera {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 20px;
+	height: 20px;
+}
+
+.i-vinyl {
+	@extend %svg-common;
+	background-position: 0 20%;
+	width: 20px;
+	height: 20px;
+}
+
+.i-voicemail {
+	@extend %svg-common;
+	background-position: 0 40%;
+	width: 20px;
+	height: 20px;
+}
+
+.i-wallet {
+	@extend %svg-common;
+	background-position: 0 60%;
+	width: 20px;
+	height: 20px;
+}
+
+.i-warning {
+	@extend %svg-common;
+	background-position: 0 80%;
+	width: 20px;
+	height: 20px;
+}
+
+.i-water {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 20px;
+	height: 20px;
+}
+

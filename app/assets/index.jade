@@ -1,0 +1,42 @@
+extends ../layouts/index.jade
+
+block head-title
+    | - Home
+
+block styles
+
+  //- another style just for this page
+
+block scripts
+
+  //- another script just for this page
+
+block content
+
+  #intro
+    h1 svg sprite
+    .flexB
+      .i-vinyl
+      .i-voicemail
+      .i-wallet
+      .i-warning
+      .i-water
+      .i-video-camera
+    h1 png sprite
+    .flexB
+      .icon.le-info
+      .le-like
+      .li-check
+      .le-loop
+    h1 About
+    #sliderOne.owl-carousel.owl-theme
+       - for (var x = 1; x < 10; x++)
+        img(src="http://lorempixel.com/output/people-q-c-1600-600-#{x}.jpg")
+    .wrappContent
+      .desc
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aut ipsa, maxime earum expedita provident repellendus dolores quisquam illum porro.
+        a.waves-effect.waves-orange.btn(href="#modal1") Modal
+        p
+          .waves-effect.waves-orange-light.btn ModalFacke
+    +Modal
+

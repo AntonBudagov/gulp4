@@ -1,0 +1,160 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+$le-check-name: 'le-check'
+$le-check-x: 0px
+$le-check-y: 87px
+$le-check-offset-x: 0px
+$le-check-offset-y: -87px
+$le-check-width: 98px
+$le-check-height: 71px
+$le-check-total-width: 287px
+$le-check-total-height: 218px
+$le-check-image: '../styles/sprite.png'
+$le-check: (0px, 87px, 0px, -87px, 98px, 71px, 287px, 218px, '../styles/sprite.png', 'le-check', )
+$le-info-name: 'le-info'
+$le-info-x: 0px
+$le-info-y: 158px
+$le-info-offset-x: 0px
+$le-info-offset-y: -158px
+$le-info-width: 61px
+$le-info-height: 60px
+$le-info-total-width: 287px
+$le-info-total-height: 218px
+$le-info-image: '../styles/sprite.png'
+$le-info: (0px, 158px, 0px, -158px, 61px, 60px, 287px, 218px, '../styles/sprite.png', 'le-info', )
+$le-leyrs-name: 'le-leyrs'
+$le-leyrs-x: 0px
+$le-leyrs-y: 0px
+$le-leyrs-offset-x: 0px
+$le-leyrs-offset-y: 0px
+$le-leyrs-width: 104px
+$le-leyrs-height: 87px
+$le-leyrs-total-width: 287px
+$le-leyrs-total-height: 218px
+$le-leyrs-image: '../styles/sprite.png'
+$le-leyrs: (0px, 0px, 0px, 0px, 104px, 87px, 287px, 218px, '../styles/sprite.png', 'le-leyrs', )
+$le-like-name: 'le-like'
+$le-like-x: 203px
+$le-like-y: 0px
+$le-like-offset-x: -203px
+$le-like-offset-y: 0px
+$le-like-width: 84px
+$le-like-height: 73px
+$le-like-total-width: 287px
+$le-like-total-height: 218px
+$le-like-image: '../styles/sprite.png'
+$le-like: (203px, 0px, -203px, 0px, 84px, 73px, 287px, 218px, '../styles/sprite.png', 'le-like', )
+$le-loop-name: 'le-loop'
+$le-loop-x: 203px
+$le-loop-y: 73px
+$le-loop-offset-x: -203px
+$le-loop-offset-y: -73px
+$le-loop-width: 73px
+$le-loop-height: 73px
+$le-loop-total-width: 287px
+$le-loop-total-height: 218px
+$le-loop-image: '../styles/sprite.png'
+$le-loop: (203px, 73px, -203px, -73px, 73px, 73px, 287px, 218px, '../styles/sprite.png', 'le-loop', )
+$le-m-w-name: 'le-m-w'
+$le-m-w-x: 104px
+$le-m-w-y: 0px
+$le-m-w-offset-x: -104px
+$le-m-w-offset-y: 0px
+$le-m-w-width: 99px
+$le-m-w-height: 87px
+$le-m-w-total-width: 287px
+$le-m-w-total-height: 218px
+$le-m-w-image: '../styles/sprite.png'
+$le-m-w: (104px, 0px, -104px, 0px, 99px, 87px, 287px, 218px, '../styles/sprite.png', 'le-m-w', )
+$le-star-name: 'le-star'
+$le-star-x: 61px
+$le-star-y: 158px
+$le-star-offset-x: -61px
+$le-star-offset-y: -158px
+$le-star-width: 52px
+$le-star-height: 57px
+$le-star-total-width: 287px
+$le-star-total-height: 218px
+$le-star-image: '../styles/sprite.png'
+$le-star: (61px, 158px, -61px, -158px, 52px, 57px, 287px, 218px, '../styles/sprite.png', 'le-star', )
+$le-think-name: 'le-think'
+$le-think-x: 98px
+$le-think-y: 87px
+$le-think-offset-x: -98px
+$le-think-offset-y: -87px
+$le-think-width: 75px
+$le-think-height: 71px
+$le-think-total-width: 287px
+$le-think-total-height: 218px
+$le-think-image: '../styles/sprite.png'
+$le-think: (98px, 87px, -98px, -87px, 75px, 71px, 287px, 218px, '../styles/sprite.png', 'le-think', )
+$spritesheet-width: 287px
+$spritesheet-height: 218px
+$spritesheet-image: '../styles/sprite.png'
+$spritesheet-sprites: ($le-check, $le-info, $le-leyrs, $le-like, $le-loop, $le-m-w, $le-star, $le-think, )
+$spritesheet: (287px, 218px, '../styles/sprite.png', $spritesheet-sprites, )
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+
+  Example usage in HTML:
+    `display: block` sprite:
+    <div class="icon-home"></div>
+
+  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+    // CSS
+    .icon {
+      display: inline-block;
+    }
+
+    // HTML
+    <i class="icon icon-home"></i>
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
